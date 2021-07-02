@@ -1,0 +1,41 @@
+mat-form-field {
+    padding: 10px;
+    width: 250px;
+}
+#search {   
+    color: rgb(255, 222, 191);    
+    font-size: larger;
+    padding: 20px;   
+    background-image: url('/assets/background.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+#header {
+    font-family: 'Marck Script', cursive;   
+    padding: 10px;
+    color: rgb(255, 255, 255);
+ }
+ 
+#title {
+    font-size:  20px;
+    margin-bottom: 10px;
+}
+
+#header a {
+    float: right;
+    padding-top: 15px;
+    text-decoration: none;
+    color: white;
+}
+mat-label {
+    color: rgb(255, 222, 191);
+}
+
+button {
+    background-color: rgba(250, 166, 87, 0.658);
+    color: white;
+}
+
+span {
+    font-size: 25px;   
+}

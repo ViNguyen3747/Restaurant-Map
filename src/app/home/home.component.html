@@ -1,0 +1,10 @@
+
+<div id="search">
+    <app-search (searchEvent)="searchEventHander($event)"></app-search>
+</div>
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
+<app-map 
+  (map$)="receiveMap($event)"
+  (zoom$)="receiveZoom($event)"
+  id='main-map'
+></app-map>

@@ -1,0 +1,30 @@
+<div *ngIf="restaurant.success; else fail">
+<h1 mat-dialog-title> {{ restaurant.restaurant_name }}</h1>
+<mat-dialog-content>
+    <h2>List of Dishes that match your search</h2>
+    <mat-tab-group color="accent">
+        <mat-tab *ngFor="let food of restaurant.menu" [label]="food.name">
+            <p>{{ food.description }}</p>
+            <p>Price: ${{food.price==0 ? 'N/A' : food.price }}</p>
+        </mat-tab>
+    </mat-tab-group>
+    <h2>Address</h2>
+    <p>{{ restaurant.address }}</p>
+    <h2>Phone Number</h2>
+    <p>{{ restaurant.restaurant_phone }}</p>
+    <h2 *ngIf="restaurant.last_updated">Last Updated</h2>
+    <p *ngIf="restaurant.last_updated">{{ restaurant.last_updated }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Close</button>
+</mat-dialog-actions>
+</div>
+
+<ng-template #fail>
+    <mat-dialog-content>Sorry, I couldn't retrieve data from your search location :((((
+        <div>Please try another city or another food.</div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button (click)="close()">Close</button>
+    </mat-dialog-actions>
+</ng-template>

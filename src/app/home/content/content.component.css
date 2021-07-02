@@ -1,0 +1,10 @@
+button {
+    background-color: rgba(250, 166, 87, 0.658);
+    color: white;
+}
+
+h1 {
+    color: rgba(250, 166, 87, 0.658);
+    font-family: 'Marck Script', cursive;
+    text-transform: uppercase;
+}

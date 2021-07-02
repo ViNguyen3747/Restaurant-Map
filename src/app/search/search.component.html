@@ -1,0 +1,22 @@
+<div id="search">
+  <div id="header">
+    <div id="title" >
+    <span>FOLLOW YOUR FOOD</span> What food are you craving???
+    </div>
+    <a href="https://linkedin.com/in/thi-kieu-vi-nguyen-0894a919a">My Linkedin</a>
+    <div>
+    ...Available for US Cities only...
+    </div>
+  </div>
+  <form [formGroup]="menuFormGroup">  
+    <mat-form-field color="accent">
+      <mat-label>City (Format: US City Name, State Code)</mat-label>
+      <input matInput type="text" formControlName="city" placeholder="EX: Seattle, WA" required>
+    </mat-form-field>      
+    <mat-form-field color="accent">
+      <mat-label>Food</mat-label>
+      <input matInput type="text" formControlName="food" placeholder="EX: Buffalo Chicken" required>
+    </mat-form-field>
+  <button mat-raised-button (click)='findLatLon()'>Search</button>
+  </form>      
+</div>
